@@ -2,7 +2,6 @@ package com.amrib.graphql.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,14 +20,14 @@ import lombok.ToString;
 public class Actor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long actorId;
+	private Integer actorId;
 	private String firstname;
 	private String lastname;
 	private Date dob;
 	private String address;
-	private Long filmId;
+	private Integer filmId;
 
-	public Actor(String firstname, String lastname, Date dob, String address, Long filmId) {
+	public Actor(String firstname, String lastname, Date dob, String address, Integer filmId) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;

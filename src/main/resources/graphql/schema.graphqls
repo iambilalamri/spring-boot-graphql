@@ -8,7 +8,7 @@ type Actor {
 	lastname: String,
 	dob: String,
 	address: String,
-	filmId: Long
+	filmId: Int
 }
 
 type Film {
@@ -18,5 +18,6 @@ type Film {
 }
 
 type Query {
-	getAllActors:[Actor]
+	getAllActors:[Actor],
+	getActorById(id: Int): Actor
 }

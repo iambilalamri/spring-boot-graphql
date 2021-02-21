@@ -7,14 +7,19 @@ import org.springframework.stereotype.Service;
 
 import com.amrib.graphql.model.Actor;
 import com.amrib.graphql.repository.ActorRepository;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
 @Service
-public class ActorService {
+public class ActorService implements GraphQLQueryResolver {
 
 	@Autowired
-	private ActorRepository actorRepository;
+	ActorRepository actorRepository;
 
 	public List<Actor> getAllActors() {
 		return actorRepository.findAll();
+	}
+
+	public Actor getActorById(Integer id) {
+		return actorRepository.findById(id).get();
 	}
 }

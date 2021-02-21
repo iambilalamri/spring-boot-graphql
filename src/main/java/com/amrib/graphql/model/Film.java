@@ -19,7 +19,7 @@ public class Film {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long filmId;
+	private Integer filmId;
 	private String name;
 	private Date launchDate;
 
