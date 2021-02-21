@@ -2,15 +2,21 @@ schema {
 	query: Query
 }
 
-type Query {
-	allBooks:[Books]
-	book(id: String): Book
+type Actor {
+	actorId: ID!,
+	firstname: String,
+	lastname: String,
+	dob: String,
+	address: String,
+	filmId: Long
 }
 
-type Book {
-	isn: String
-	title: String
-	publisher: String
-	authors: String
-	publishedDate: String
+type Film {
+	filmId: ID!,
+	name: String,
+	launchDate: String
+}
+
+type Query {
+	getAllActors:[Actor]
 }
