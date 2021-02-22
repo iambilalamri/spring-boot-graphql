@@ -3,21 +3,22 @@ schema {
 }
 
 type Actor {
-	actorId: ID!,
-	firstname: String,
-	lastname: String,
-	dob: String,
-	address: String,
+	actorId: ID!
+	firstname: String
+	lastname: String
+	dob: String
+	address: String
 	filmId: Int
+	film: Film!
 }
 
 type Film {
-	filmId: ID!,
-	name: String,
+	filmId: ID!
+	name: String
 	launchDate: String
 }
 
 type Query {
-	getAllActors:[Actor],
+	getAllActors:[Actor]
 	getActorById(id: Int): Actor
 }

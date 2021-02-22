@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.amrib.graphql.model.Actor;
 import com.amrib.graphql.repository.ActorRepository;
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+
+import graphql.kickstart.tools.GraphQLQueryResolver;
 
 @Service
 public class ActorService implements GraphQLQueryResolver {
