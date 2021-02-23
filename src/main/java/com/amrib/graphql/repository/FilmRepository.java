@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.amrib.graphql.model.Film;
 
-@Service
+@Repository
 public interface FilmRepository extends JpaRepository<Film, Integer> {
 
 }

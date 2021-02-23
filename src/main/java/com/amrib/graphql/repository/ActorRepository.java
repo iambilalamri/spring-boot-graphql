@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.amrib.graphql.model.Actor;
 
-@Service
+@Repository
 public interface ActorRepository extends JpaRepository<Actor, Integer> {
+
+	public Actor findActorByFirstnameLike(String name);
 
 }

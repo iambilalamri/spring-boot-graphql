@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import com.amrib.graphql.model.Actor;
 import com.amrib.graphql.model.Film;
 import com.amrib.graphql.repository.FilmRepository;
+import com.coxautodev.graphql.tools.GraphQLResolver;
 
-import graphql.kickstart.tools.GraphQLResolver;
 
 @Service
-public class FilmResolver implements GraphQLResolver<Film> {
+public class FilmService implements GraphQLResolver<Actor> {
 
 	@Autowired
 	private FilmRepository filmRepository;
