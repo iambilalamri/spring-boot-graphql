@@ -26,7 +26,6 @@ public class Actor {
 	private Date dob;
 	private String address;
 	private Integer filmId;
-	//private Film film;
 
 	public Actor(String firstname, String lastname, Date dob, String address, Integer filmId) {
 		super();
