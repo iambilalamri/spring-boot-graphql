@@ -1,6 +1,7 @@
 schema {
 	query: Query
 	mutation:Mutation
+	subscription:Subscription
 }
 
 type Actor {
@@ -25,6 +26,15 @@ type Query {
 	getAllFilms:[Film]
 }
 
+input AddressInput {
+	actorId:Int
+	address:String
+}
+
 type Mutation {
-	updateAddress(id:Int, address:String):Actor
+	updateAddressByInputObject(input:AddressInput):Actor
+}
+
+type Subscription {
+	onActorUpdate(actorId:Int):Actor
 }
